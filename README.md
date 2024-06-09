@@ -1,71 +1,106 @@
-# DappBnb Project Documentation
+# Blockchain Marketplace
 
-<!-- Read the full tutorial here: **[>> How to build a Decentralized Game Platform with Next.js, TypeScript, Tailwind CSS, and Solidity](https://daltonic.github.io)** -->
+Welcome to the Blockchain Marketplace project. This decentralized application (DApp) allows users to buy and sell products using blockchain technology, ensuring secure and transparent transactions. 
 
-![House Rental Marketplace](./screenshots/0.png)
-The DappBnb project is a decentralized application built on the Ethereum blockchain. It is a rental marketplace where users can list, book, and review apartments. The project revolves around `DappBnb.sol`, a Solidity-written Ethereum smart contract. It leverages the OpenZeppelin library to ensure secure and standardized development of the contract.
+## Demo
 
-![House Rental Marketplace](./screenshots/1.png)
-The core of the contract is defined by three primary structures: `ApartmentStruct`, `BookingStruct`, and `ReviewStruct`, representing an apartment, a booking, and a review, respectively.
+Watch the [Demo Video](https://ikuedu-my.sharepoint.com/personal/2200006734_stu_iku_edu_tr/_layouts/15/stream.aspx?id=%2Fpersonal%2F2200006734%5Fstu%5Fiku%5Fedu%5Ftr%2FDocuments%2FGroup11%5FDemo%2Emov&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E5df10b19%2D84e3%2D461f%2D96bc%2Df276b8ee648a) for an overview of the project.
 
-## Key Features
+## Features
 
-- `createAppartment`: Allows a user to create a new apartment listing.
-- `updateAppartment`: Allows the apartment owner to update the details of an apartment.
-- `deleteAppartment`: Allows the apartment owner to delete an apartment listing.
-- `getApartments`: Allows a user to fetch all available apartments.
-- `getApartment`: Allows a user to fetch the details of a specific apartment.
-- `bookApartment`: Allows a user to book an apartment for specific dates.
-- `checkInApartment`: Allows a tenant to check into an apartment and triggers the payment process.
-- `claimFunds`: Allows the apartment owner to claim funds after a booking is completed.
-- `refundBooking`: Allows a tenant to cancel a booking and get a refund.
-- `getUnavailableDates`: Allows a user to fetch all booked dates for a specific apartment.
-- `getBookings`: Allows a user to fetch all bookings for a specific apartment.
-- `getBooking`: Allows a user to fetch the details of a specific booking.
-- `addReview`: Allows a tenant to add a review for an apartment.
-- `getReviews`: Allows a user to fetch all reviews for a specific apartment.
+- **Decentralized Marketplace**: Users can list, browse, and purchase products securely.
+- **Smart Contracts**: Transactions are handled by Ethereum smart contracts, ensuring trust and transparency.
+- **User Authentication**: Users authenticate using their Ethereum wallets.
+- **Product Management**: Sellers can add, update, and delete product listings.
+- **Purchase Management**: Buyers can approve and refund purchases.
+- **Review System**: Buyers can leave reviews and ratings for purchased products.
+- **Dark Mode**: The application supports a dark mode for better user experience.
 
-## Running the Application
+## Technologies Used
 
-Supply the following keys in your `.env` variable:
+- **Frontend**: React, Next.js, Tailwind CSS
+- **Blockchain**: Ethereum, Solidity, ethers.js
+- **Backend**: Node.js
+- **Smart Contracts**: OpenZeppelin
 
-```sh
-NEXT_PUBLIC_RPC_URL=http://127.0.0.1:8545
-NEXT_PUBLIC_ALCHEMY_ID=<YOUR_ALCHEMY_PROJECT_ID>
-NEXT_PUBLIC_PROJECT_ID=<WALLET_CONNECT_PROJECT_ID>
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=somereallysecretsecret
-```
+## Installation
 
-`YOUR_ALCHEMY_PROJECT_ID`: [Get Key Here](https://dashboard.alchemy.com/)
-`WALLET_CONNECT_PROJECT_ID`: [Get Key Here](https://cloud.walletconnect.com/sign-in)
+1. **Clone the repository**
+    ```sh
+    git clone https://github.com/Samibltc/Blockchain-Marketplace.git
+    cd Blockchain-Marketplace
+    ```
 
-Follow these steps to run the application:
+2. **Install dependencies**
+    ```sh
+    npm install
+    ```
 
-1. Install the package modules by running the command: `yarn install`
-2. Start the Hardhat server: `yarn blockchain`
-3. Run the contract deployment script: `yarn deploy`
-4. Run the contract seeding script: `yarn seed`
-5. Spin up the Next.js development server: `yarn dev`
+3. **Compile Smart Contracts**
+    ```sh
+    npx hardhat compile
+    ```
 
-Now, your application should be up and running.
+4. **Deploy Smart Contracts**
+    ```sh
+    npx hardhat run scripts/deploy.js --network YOUR_NETWORK
+    ```
 
-## 📚 Key Technologies
+5. **Set up environment variables**
 
-- 🌐 Next.js: A React framework for building server-side rendered and static websites.
-- 📘 TypeScript: A statically typed superset of JavaScript.
-- 📦 Hardhat: A development environment for Ethereum smart contracts.
-- 🌐 EthersJs: A library for interacting with Ethereum and Ethereum-like blockchains.
-- 📚 Redux-Toolkit: A library for managing application state.
-- 🎨 Tailwind CSS: A utility-first CSS framework.
+    Create a `.env` file in the root directory and add your environment variables:
+    ```sh
+    NEXT_PUBLIC_RPC_URL=YOUR_RPC_URL
+    NEXT_PUBLIC_CONTRACT_ADDRESS=YOUR_DEPLOYED_CONTRACT_ADDRESS
+    ```
 
-## Useful links
+6. **Run the application**
+    ```sh
+    npm run dev
+    ```
 
-- 🏠 [Website](https://dappmentors.org/)
-- ⚽ [Metamask](https://metamask.io/)
-- 💡 [Hardhat](https://hardhat.org/)
-- 📈 [Alchemy](https://dashboard.alchemy.com/)
-- 🔥 [NextJs](https://nextjs.org/)
-- 🎅 [TypeScript](https://www.typescriptlang.org/)
-- 🐻 [Solidity](https://soliditylang.org/)
-- 👀 [EthersJs](https://docs.ethers.io/v5/)
+7. **Run tests**
+    ```sh
+    npx hardhat test
+    ```
+
+## Usage
+
+- **Browse Products**: Visit the homepage to browse available products.
+- **View Product Details**: Click on a product to view detailed information.
+- **Add Product**: As a seller, navigate to the "Sell Products" page to list a new product.
+- **Manage Purchases**: Visit the "Purchases" page to view and manage your transactions.
+
+## File Structure
+
+- `contracts/`: Solidity smart contracts.
+- `scripts/`: Deployment scripts.
+- `pages/`: Next.js pages.
+- `components/`: React components.
+- `services/`: Blockchain interaction logic.
+- `store/`: Redux store setup.
+
+## Contributing
+
+1. **Fork the repository**
+2. **Create a new branch**
+    ```sh
+    git checkout -b feature/YourFeature
+    ```
+3. **Commit your changes**
+    ```sh
+    git commit -m 'Add some feature'
+    ```
+4. **Push to the branch**
+    ```sh
+    git push origin feature/YourFeature
+    ```
+5. **Open a pull request**
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
+
+## Contact
+
+For any questions or feedback, please open an issue on the [GitHub repository](https://github.com/Samibltc/Blockchain-Marketplace).
