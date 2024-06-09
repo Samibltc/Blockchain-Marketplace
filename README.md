@@ -4,7 +4,7 @@ Welcome to the Blockchain Marketplace project. This decentralized application (D
 
 ## Demo
 
-Watch the [Demo Video](https://ikuedu-my.sharepoint.com/personal/2200006734_stu_iku_edu_tr/_layouts/15/stream.aspx?id=%2Fpersonal%2F2200006734%5Fstu%5Fiku%5Fedu%5Ftr%2FDocuments%2FGroup11%5FDemo%2Emov&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E5df10b19%2D84e3%2D461f%2D96bc%2Df276b8ee648a) for an overview of the project.
+Watch the [Demo Video](https://drive.google.com/file/d/1KoLcHG0mWA0hOpxnwjEbkx2DC6BLdh9r/view) for an overview of the project.
 
 ## Features
 
